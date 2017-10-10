@@ -3,7 +3,7 @@ var app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
+  res.render('index');
 });
 app.get('/profile/:name', function(req, res){
   var data = {age: 26, job: 'ninja', hobbies: ['pes2017', 'fighting', 'fishing']};
